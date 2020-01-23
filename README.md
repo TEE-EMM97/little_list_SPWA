@@ -19,7 +19,7 @@ A simple starter AngularJS single page web-app which displays a list of canned e
 
   This will prompt you for your machines admin password, enter your password to complete the process; giving you a similar output as below.
 
-  ![terminal-output](/Users/tm97/Documents/GitHub/little_list_angular/terminal-output.png)
+ [![terminal-output.png](https://i.postimg.cc/L8TsBdZs/terminal-output.png)](https://postimg.cc/DSSFnM6V)
 
 - Finally enter this final line of code to get your the single page web-app up and running!
 
