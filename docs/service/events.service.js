@@ -44,6 +44,9 @@
 
                 result.push(createEvent("event " + index, date, postcode));
             }
+            
+            //  uncomment the below to test an error condition
+            // result = null;
             return result;
         }
 
@@ -52,13 +55,21 @@
             var deferred = $q.defer();
             
             $timeout(
-                function(){
-                    eventsArray = createDummyEvents(NUM_DUMMY_EVENTS);
-                    deferred.resolve(eventsArray);
-                },
-            PAUSE_FOR_A_WHILE_MS);            
+                function () {
+                    let result = createDummyEvents(NUM_DUMMY_EVENTS);
+
+                    if(result !== null){
+                        eventsArray = result;
+                        deferred.resolve(eventsArray);
+                    }else{
+                        eventsArray = [];
+                        deferred.reject(new Error("YOUR ERROR MESSAGE HERE"));
+                    }
+                    },
+                    PAUSE_FOR_A_WHILE_MS);
+                
             
-            
+
             return deferred.promise;
         }
 
@@ -68,7 +79,7 @@
         }
 
         service.updateEvents = function(){
-            return promiseToUpdateEvents();   
+            return promiseToUpdateEvents();
         } 
 
         service.getEvents = function(){
