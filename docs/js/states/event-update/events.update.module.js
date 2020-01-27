@@ -10,7 +10,7 @@
             $stateProvider
                 .state('events_update', {
                     url: '/events_update',
-                    templateUrl: 'states/event-update/events.update.html',
+                    templateUrl: 'js/states/event-update/events.update.html',
                     controller: 'eventsUpdateCtrl as vm',
                     cache: false
                 });

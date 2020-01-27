@@ -11,7 +11,7 @@
                 .state('events_list', {
                     cache: false,
                     url: '/events_list',
-                    templateUrl: 'states/event-list/events.list.html',
+                    templateUrl: 'js/states/event-list/events.list.html',
                     controller: 'eventsListCtrl as vm'
                 })
             $urlRouterProvider.otherwise('/events_list');
