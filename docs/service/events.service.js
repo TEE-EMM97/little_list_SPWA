@@ -82,8 +82,19 @@
             return promiseToUpdateEvents();
         } 
 
+        function getEventNames(array){
+            var result = [];
+            array.forEach(
+                function(event){
+                    result.push(event.name);
+                }
+            );
+            return result;
+        }
+
+
         service.getEvents = function(){
-            return angular.copy(eventsArray);
+            return getEventNames(eventsArray);
         }
 
         service.getNumEvents = function(){

@@ -15,7 +15,7 @@
         eventsSrvc
     ) {
         var vm = angular.extend(this, {
-            events : []
+            names : []
          });
         
 
@@ -32,7 +32,7 @@
         }
 
         vm.noEvents = function(){
-            return vm.events.length === 0;
+            return vm.names.length === 0;
         }
 
         vm.update = function(){
@@ -41,7 +41,7 @@
         }
 
 
-        vm.events = eventsSrvc.getEvents();
+        vm.names = eventsSrvc.getEvents();
               
     }
 })();

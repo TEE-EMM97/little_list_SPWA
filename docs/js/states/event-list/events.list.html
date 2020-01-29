@@ -2,11 +2,11 @@
     <div>
         <div>
             <ul class="list-group" style="font-size:18px; margin-top: -8px;">
-                <li class="list-group-item" ng-click="vm.onItemSelected($index)" ng-repeat="event in vm.events">{{event.name}}</li>
+                <li class="list-group-item" ng-click="vm.onItemSelected($index)" ng-repeat="name in vm.names">{{name}}</li>
             </ul>
         </div>
 
-        <div ng-class="{'d-none': vm.events.length !== 0 }">
+        <div ng-class="{'d-none': vm.names.length !== 0 }">
             <h1 class="text-center">No Items Yet!</h1>
         </div>
     </div>
