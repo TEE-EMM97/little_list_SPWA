@@ -6,10 +6,12 @@
     'ui.router',// ADDED for page navigation
     'momentjs', // ADDED used for dates
     'eventsjs',  // ADDED our events module
-    'eventUpdateState',// ADDED our update page(state)
-    'eventsListState', // ADDED our list page(state)
-    'eventsDetailState' // ADDED our detail page(state)
+    'mainjs'// ADDED for our states module
   ])
+
+    .config(function ($urlRouterProvider){
+      $urlRouterProvider.otherwise('/events_list');
+    })
 
     .run(function ($state, $rootScope) {
       $rootScope.$on('$stateChangeError', function (event, toState, toParams, fromState, fromParams) {
