@@ -6,7 +6,9 @@
     'ui.router',// ADDED for page navigation
     'momentjs', // ADDED used for dates
     'eventsjs',  // ADDED our events module
-    'mainjs'// ADDED for our states module
+    'eventUpdateState',// ADDED our update page(state)
+    'eventsListState', // ADDED our list page(state)
+    'eventsDetailState' // ADDED our detail page(state)
   ])
 
     .config(function ($urlRouterProvider){
